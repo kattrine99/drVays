@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 20px 80px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navigation{
+    display: flex;
+    gap: 20px;
+}
+.header nav ul {
+    list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+.header nav ul li a {
+   color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: #CE0004;
+  }
+}
