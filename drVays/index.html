@@ -7,25 +7,36 @@
     <title>Doctor Vays</title>
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <a href="index.html"><img src="public/Logo.png" alt="Doctor Vays Logo" style="width: 200px;"/></a>
-      </div>
-      
-      <div class="navigation">
-        <nav>
-        <ul>
-          <li><a href="index.html">О клинике</a></li>
-          <li><a href="services.html">Врачи</a></li>
-          <li><a href="about.html">услуги</a></li>
-          <li><a href="contact.html">Отзывы</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </nav>
-        <a href="tel:+1234567890" target="_blank">Записаться на прием</a>
-      </div>
-    </header>
-    <main>
+  <header class="header">
+  <div class="logo">
+    <a href="index.html">
+      <img src="public/Logo.png" alt="Doctor Vays Logo" />
+    </a>
+  </div>
+
+  <button class="burger" id="burger" aria-label="Открыть меню">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="navigation" id="navigation">
+    <nav>
+      <ul>
+        <li><a href="index.html">О клинике</a></li>
+        <li><a href="services.html">Врачи</a></li>
+        <li><a href="about.html">Услуги</a></li>
+        <li><a href="contact.html">Отзывы</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <a class="appointment-button" href="tel:+1234567890">
+      Записаться на прием
+    </a>
+  </div>
+  </header>
+    <main id="main-window">
       <h1>Doctor Vays</h1>
       <p>Welcome to the Doctor Vays website! Here you can find information about our services, book appointments, and learn more about our team of healthcare professionals.</p>
       <button id="book-appointment">Записаться на прием</button>

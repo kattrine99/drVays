@@ -1,32 +1,194 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header {
-    padding: 20px 80px;
-    text-align: center;
+    padding: 20px calc(56px + (80 - 56) * ((100vw - 1024px) / (1440 - 1024)));
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-}
-.navigation{
-    display: flex;
-    gap: 20px;
-}
-.header nav ul {
-    list-style: none;
+    background: #ffffff;
+    position: relative;
+    z-index: 100;
+
+    .logo {
+        a {
         display: flex;
-        flex-direction: row;
-        gap: 20px;
+        align-items: center;
+        }
+
+    img {
+      width: 200px;
+      height: auto;
     }
-.header nav ul li a {
-   color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-  &:hover {
-    color: #CE0004;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      font-weight: 500;
+      font-family: "Montserrat", serif;
+      gap: 20px;
+
+      li {
+       a {
+            position: relative;
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                width: 0;
+                height: 2px;
+                background-color: #e70108;
+                border-radius: 10px;
+                transition: width 0.5s ease-in-out;
+            }
+
+            &:hover {
+                color: #ce0004;
+
+                &::after {
+                width: 100%;
+                }
+            }
+            }
+      }
+    }
+  }
+
+  .appointment-button {
+    background-color: #e70108;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Montserrat", serif;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #ce0004;
+    }
+  }
+
+  .burger {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 102;
+
+    span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background-color: #e70108;
+      border-radius: 10px;
+      margin: 6px auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 16px 24px;
+
+    .logo {
+      img {
+        width: 160px;
+      }
+    }
+
+    .burger {
+      display: block;
+    }
+
+    .navigation {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 320px;
+      max-width: 85%;
+      height: 100vh;
+      background-color: #ffffff;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 30px;
+      padding: 100px 28px 32px;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+      transition: right 0.35s ease-in-out;
+      z-index: 101;
+
+      &.active {
+        right: 0;
+      }
+
+      nav {
+        width: 100%;
+
+        ul {
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 22px;
+
+          li {
+            width: 100%;
+
+            a {
+              display: block;
+              width: 100%;
+              font-size: 18px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      .appointment-button {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+      }
+    }
   }
 }
