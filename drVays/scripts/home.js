@@ -8,9 +8,22 @@ burger.addEventListener("click", () => {
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 const mainWindow = document.getElementById("main-window");
 
-scrollTopBtn.addEventListener("click", () => {
-  mainWindow.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+if (scrollTopBtn && mainWindow) {
+  scrollTopBtn.addEventListener("click", () => {
+    mainWindow.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   });
-});
+}
+  const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });

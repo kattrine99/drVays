@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />  
+    
     <title>Doctor Vays</title>
   </head>
   <body>
@@ -36,7 +38,7 @@
     </a>
   </div>
   </header>
-    <main id="main-window" class="hero">
+    <main id="main-window" class="start">
       <div class="hero__container">
           <div class="hero__content">
             <div class="hero__text">
@@ -86,10 +88,74 @@
           </div>
     
       </div>
+      <div class="about-clinic" id="about-clinic">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="about-slide__content">
+                  <div class="about-slide__counter">
+                    <span>01</span>
+                    <i></i>
+                    <span>03</span>
+                  </div>
+
+                  <h2>О нашей клинике</h2>
+
+                  <p>
+                    Мы сочетаем современные методы, передовые технологии и внимательное
+                    отношение к каждому пациенту. Наша цель — не просто лечение, а забота
+                    о вашем здоровье на всех этапах.
+                  </p>
+
+                  <div class="about-stats">
+                    <div class="about-stat">
+                      <div class="about-stat__icon">✚</div>
+                      <strong>10+</strong>
+                      <span>лет заботимся<br>о вашем здоровье</span>
+                    </div>
+
+                    <div class="about-stat">
+                      <div class="about-stat__icon">👥</div>
+                      <strong>5000+</strong>
+                      <span>довольных<br>пациентов</span>
+                    </div>
+
+                    <div class="about-stat">
+                      <div class="about-stat__icon">✚</div>
+                      <strong>20+</strong>
+                      <span>направлений<br>медицины</span>
+                    </div>
+
+                    <div class="about-stat">
+                      <div class="about-stat__icon">🏅</div>
+                      <strong>15</strong>
+                      <span>врачей высшей<br>категории</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="about-slide__image">
+                  <img src="public/clinic1.png" alt="О клинике">
+                </div>
+              </div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+      </div>         
     </main>
     <footer>
       <p>&copy; 2023 Doctor Vays. All rights reserved.</p>
     </footer>
-    <script type="module" src="scripts/home.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="module" src="scripts/home.js"></script>
   </body>
 </html>
