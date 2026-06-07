@@ -269,7 +269,7 @@ html {
 }
 
 /* ── Блок "О клинике" ── */
-.about-clinic , #yandexreview {
+.about-clinic , #yandexreview , #doctors{
   padding: 30px calc(46px + (90 - 46) * ((100vw - 1024px) / (1440 - 1024)));
   background: #ffffff;
   position: relative;
@@ -280,10 +280,10 @@ html {
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 400px;
   padding-top: 20px;
 }
 .about-slide__counter {
+  display: visible;
   position: absolute;
   top: 30px;
   left: 30px;
@@ -316,22 +316,17 @@ html {
   }
 }
 
-.swiper {
+.about-clinic .swiper {
     position: relative;
     width: 100%;
     height: 100%;
     padding: 10px;
 }
-.swiper-wrapper {
-    display: flex;
-}
-.swiper-slide {
+.about-clinic .swiper-slide {
     padding: 20px;
     text-align: center;
-    font-size: 18px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    display: flex;
+    gap: 0 40px;
     align-items: stretch;
     justify-content: center;
     background-color: #fff;
@@ -345,9 +340,10 @@ html {
   }
   .about-stat{
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    font-size: 16px;
     align-items: center;
-    padding: 16px 20px;
+    padding: 12px 16px;
     border: 1px solid #ebebf0;
     border-radius: 16px;
   }
@@ -373,16 +369,15 @@ html {
     border-radius: 16px;
     overflow: hidden;
   }
-  .swiper-slide img {
+  .about-clinic .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 h2 {
-    font-size: clamp(28px, 4vw, 56px);
+    font-size: clamp(24px, calc(17.66px + 1.69vw), 42px);
     color: #111111;
-    margin-bottom: 26px;
     font-weight: 800;
     position: relative;
     text-align: left;
@@ -393,18 +388,16 @@ h2 {
       height: 4px;
       background: #e70108;
       border-radius: 10px;
-      margin-top: 20px;
     }
   }
   p {
     font-size: 15px;
     line-height: 1.65;
-    margin-bottom: 20px;
   }
 .swiper-button-next,
 .swiper-button-prev {
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
   background: #ffffff;
   border: 1.5px solid #e70108;
   transform: rotate(45deg);
@@ -430,6 +423,25 @@ h2 {
     }
   }
 }
+    .doctorSwiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .doctor-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    .doctor-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 /* ════ АДАПТИВ ════ */
 @media (max-width: 1024px) {
   .hero__image img { width: 320px; }
@@ -555,17 +567,15 @@ h2 {
 
 /* ── Кнопка "Подробнее" ── */
 .about-stat__label {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 16px;
   color: #14142a;
   line-height: 1.3;
 }
 
 .slide-more-btn {
-  display: inline-flex;
+  display: none;
   align-items: center;
   gap: 8px;
-  margin-top: 20px;
   background: transparent;
   border: 1.5px solid #e70108;
   color: #e70108;
@@ -679,6 +689,44 @@ h2 {
   }
 }
 
+/* ════ АДАПТИВ 900px ════ */
+@media (max-width: 900px) {
+  .swiper-slide {
+    flex-direction: column;
+  }
+
+  .about-slide__image {
+    order: -1;
+    height: 260px;
+    min-height: unset;
+  }
+
+  .about-slide__content {
+    min-height: unset;
+    padding-top: 0;
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+.about-slide__counter{
+  display: none;
+}
+  .swiper-slide .about-stats {
+    display: none;
+  }
+
+  .slide-more-btn {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* ════ АДАПТИВ 600px ════ */
 @media (max-width: 600px) {
   .hero__container{
@@ -722,7 +770,6 @@ h2 {
     }
   }
 
-  /* Скрываем карточки-статы в слайде — они покажутся в модале */
   .swiper-slide .about-stats {
     display: none;
   }
@@ -733,7 +780,6 @@ h2 {
     margin-top: 14px;
   }
 
-  /* Модал на мобиле */
   .slide-modal__container {
     width: 96vw;
     padding: 24px 16px;
