@@ -26,8 +26,8 @@
     <nav>
       <ul>
         <li><a href="#about-clinic">О клинике</a></li>
-        <li><a href="services.html">Врачи</a></li>
-        <li><a href="">Услуги</a></li>
+        <li><a href="#doctors">Врачи</a></li>
+        <li><a href="#services">Услуги</a></li>
         <li><a href="#yandexreview">Отзывы</a></li>
         <li><a href="contact.html">Контакты</a></li>
       </ul>
@@ -325,53 +325,375 @@
           </div>
       </div>  
       <div id="doctors">
-        <div class="doctor-header"></div>
-          <div class="swiper doctorSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide doctor-slide">
-                <img src="https://swiperjs.com/demos/images/abstract-1.jpg" />
-              </div>
-              <div class="swiper-slide doctor-slide">
-                <img src="https://swiperjs.com/demos/images/abstract-2.jpg" />
-              </div>
-              <div class="swiper-slide doctor-slide">
-                <img src="https://swiperjs.com/demos/images/abstract-3.jpg" />
-              </div>
-              <div class="swiper-slide doctor-slide">
-                <img src="https://swiperjs.com/demos/images/abstract-4.jpg" />
-              </div>
-              <div class="swiper-slide doctor-slide">
-                <img src="https://swiperjs.com/demos/images/abstract-5.jpg" />
-              </div>
-              <div class="swiper-slide doctor-slide">
-                <img src="https://swiperjs.com/demos/images/abstract-6.jpg" />
-              </div>
-              <div class="swiper-slide doctor-slide">
-                <img src="https://swiperjs.com/demos/images/abstract-7.jpg" />
-              </div>
-              <div class="swiper-slide doctor-slide">
-                <img src="https://swiperjs.com/demos/images/abstract-8.jpg" />
-              </div>
-              <div class="swiper-slide doctor-slide">
-                <img src="https://swiperjs.com/demos/images/abstract-9.jpg" />
+        <div class="doctors-container">
+          <div class="doctors-header">
+          <h2>Наши <span>врачи</span></h2>
+          <p>Квалифицированные специалисты с многолетним опытом работы</p>
+        </div>
+        <div class="swiper doctorSwiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="doctor-card"
+                data-name="Вайс Виктор Игоревич"
+                data-specialty="Кардиолог, терапевт"
+                data-experience="20 лет"
+                data-since="2004"
+                data-about="Врач высшей категории. Специализируется на диагностике, лечении и профилактике заболеваний сердечно-сосудистой системы. Индивидуальный подход и современное оборудование позволяют добиваться высоких результатов в лечении."
+                data-specs='["Диагностика и лечение заболеваний сердца","Артериальная гипертензия","Ишемическая болезнь сердца","Нарушения ритма сердца","Профилактика сердечно-сосудистых заболеваний"]'
+                data-photos='["https://swiperjs.com/demos/images/abstract-1.jpg","https://swiperjs.com/demos/images/abstract-2.jpg","https://swiperjs.com/demos/images/abstract-3.jpg","https://swiperjs.com/demos/images/abstract-4.jpg"]'>
+                <div class="doctor-card__photo">
+                  <img src="https://swiperjs.com/demos/images/abstract-1.jpg" alt="Вайс Виктор Игоревич">
+                </div>
+                <div class="doctor-card__body">
+                  <h3>Вайс Виктор Игоревич</h3>
+                  <span class="doctor-card__specialty">Кардиолог, терапевт</span>
+                  <div class="doctor-card__meta">
+                    <span>⏱ Стаж: 20 лет</span>
+                    <span>📅 С 2004 года</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+
+            <div class="swiper-slide">
+              <div class="doctor-card"
+                data-name="Петрова Анна Сергеевна"
+                data-specialty="Гинеколог, эндокринолог"
+                data-experience="15 лет"
+                data-since="2009"
+                data-about="Специалист в области женского здоровья. Проводит диагностику и лечение гинекологических заболеваний, ведение беременности, коррекцию гормональных нарушений."
+                data-specs='["Гинекология","Эндокринология","Планирование беременности","УЗИ органов малого таза","Гормональная терапия"]'
+                data-photos='["https://swiperjs.com/demos/images/abstract-2.jpg","https://swiperjs.com/demos/images/abstract-3.jpg","https://swiperjs.com/demos/images/abstract-4.jpg","https://swiperjs.com/demos/images/abstract-5.jpg"]'>
+                <div class="doctor-card__photo">
+                  <img src="https://swiperjs.com/demos/images/abstract-2.jpg" alt="Петрова Анна Сергеевна">
+                </div>
+                <div class="doctor-card__body">
+                  <h3>Петрова Анна Сергеевна</h3>
+                  <span class="doctor-card__specialty">Гинеколог, эндокринолог</span>
+                  <div class="doctor-card__meta">
+                    <span>⏱ Стаж: 15 лет</span>
+                    <span>📅 С 2009 года</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="doctor-card"
+                data-name="Смирнова Елена Викторовна"
+                data-specialty="УЗИ-диагност"
+                data-experience="12 лет"
+                data-since="2012"
+                data-about="Специалист ультразвуковой диагностики. Проводит исследования органов брюшной полости, щитовидной железы, молочных желёз, сосудов и сердца."
+                data-specs='["УЗИ органов брюшной полости","УЗИ щитовидной железы","Эхокардиография","УЗИ молочных желёз","УЗИ сосудов"]'
+                data-photos='["https://swiperjs.com/demos/images/abstract-3.jpg","https://swiperjs.com/demos/images/abstract-4.jpg","https://swiperjs.com/demos/images/abstract-5.jpg","https://swiperjs.com/demos/images/abstract-6.jpg"]'>
+                <div class="doctor-card__photo">
+                  <img src="https://swiperjs.com/demos/images/abstract-3.jpg" alt="Смирнова Елена Викторовна">
+                </div>
+                <div class="doctor-card__body">
+                  <h3>Смирнова Елена Викторовна</h3>
+                  <span class="doctor-card__specialty">УЗИ-диагност</span>
+                  <div class="doctor-card__meta">
+                    <span>⏱ Стаж: 12 лет</span>
+                    <span>📅 С 2012 года</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="doctor-card"
+                data-name="Козлов Андрей Николаевич"
+                data-specialty="Терапевт, семейный врач"
+                data-experience="18 лет"
+                data-since="2006"
+                data-about="Врач первичного звена. Занимается диагностикой и лечением широкого спектра заболеваний. Проводит профилактические осмотры и направляет к узким специалистам."
+                data-specs='["Терапия","Пульмонология","Сахарный диабет","Профилактические осмотры","Хронические заболевания"]'
+                data-photos='["https://swiperjs.com/demos/images/abstract-4.jpg","https://swiperjs.com/demos/images/abstract-5.jpg","https://swiperjs.com/demos/images/abstract-6.jpg","https://swiperjs.com/demos/images/abstract-7.jpg"]'>
+                <div class="doctor-card__photo">
+                  <img src="https://swiperjs.com/demos/images/abstract-4.jpg" alt="Козлов Андрей Николаевич">
+                </div>
+                <div class="doctor-card__body">
+                  <h3>Козлов Андрей Николаевич</h3>
+                  <span class="doctor-card__specialty">Терапевт, семейный врач</span>
+                  <div class="doctor-card__meta">
+                    <span>⏱ Стаж: 18 лет</span>
+                    <span>📅 С 2006 года</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="doctor-card"
+                data-name="Новикова Мария Петровна"
+                data-specialty="Дерматолог, косметолог"
+                data-experience="10 лет"
+                data-since="2014"
+                data-about="Специалист в области дерматологии и эстетической медицины. Лечит кожные заболевания и проводит косметологические процедуры с использованием современных методов."
+                data-specs='["Дерматология","Косметология","Акне и угри","Лечение псориаза","Инъекционная косметология"]'
+                data-photos='["https://swiperjs.com/demos/images/abstract-5.jpg","https://swiperjs.com/demos/images/abstract-6.jpg","https://swiperjs.com/demos/images/abstract-7.jpg","https://swiperjs.com/demos/images/abstract-8.jpg"]'>
+                <div class="doctor-card__photo">
+                  <img src="https://swiperjs.com/demos/images/abstract-5.jpg" alt="Новикова Мария Петровна">
+                </div>
+                <div class="doctor-card__body">
+                  <h3>Новикова Мария Петровна</h3>
+                  <span class="doctor-card__specialty">Дерматолог, косметолог</span>
+                  <div class="doctor-card__meta">
+                    <span>⏱ Стаж: 10 лет</span>
+                    <span>📅 С 2014 года</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="doctor-card"
+                data-name="Иванов Дмитрий Александрович"
+                data-specialty="Уролог, андролог"
+                data-experience="16 лет"
+                data-since="2008"
+                data-about="Специализируется на заболеваниях мочеполовой системы у мужчин и женщин. Применяет современные методы диагностики и малоинвазивные методы лечения."
+                data-specs='["Урология","Андрология","Мочекаменная болезнь","Простатит","Инфекции мочевыводящих путей"]'
+                data-photos='["https://swiperjs.com/demos/images/abstract-6.jpg","https://swiperjs.com/demos/images/abstract-7.jpg","https://swiperjs.com/demos/images/abstract-8.jpg","https://swiperjs.com/demos/images/abstract-9.jpg"]'>
+                <div class="doctor-card__photo">
+                  <img src="https://swiperjs.com/demos/images/abstract-6.jpg" alt="Иванов Дмитрий Александрович">
+                </div>
+                <div class="doctor-card__body">
+                  <h3>Иванов Дмитрий Александрович</h3>
+                  <span class="doctor-card__specialty">Уролог, андролог</span>
+                  <div class="doctor-card__meta">
+                    <span>⏱ Стаж: 16 лет</span>
+                    <span>📅 С 2008 года</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
+          <div class="swiper-pagination doctorPagination"></div>
+        </div>
+        </div>
+      </div>
+      <div id="services">
+        <div class="services-header">
+          <h2>Наши услуги</h2>
+          <p>Полный спектр диагностики и лечения для всей семьи</p>
+        </div>
+        <div class="services-list">
+
+          <div class="service-item">
+            <button class="service-item__header">
+              <span class="service-item__icon">◎</span>
+              <span class="service-item__title">УЗИ-диагностика</span>
+              <span class="service-item__arrow">›</span>
+            </button>
+            <div class="service-item__content">
+              <ul>
+                <li>УЗИ молочных желёз</li>
+                <li>УЗИ щитовидной железы</li>
+                <li>УЗИ органов брюшной полости</li>
+                <li>УЗИ органов малого таза</li>
+                <li>УЗИ сосудов</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <button class="service-item__header">
+              <span class="service-item__icon">♡</span>
+              <span class="service-item__title">Гинекология</span>
+              <span class="service-item__arrow">›</span>
+            </button>
+            <div class="service-item__content">
+              <ul>
+                <li>Консультация гинеколога</li>
+                <li>УЗИ при беременности</li>
+                <li>Кольпоскопия</li>
+                <li>Лечение эрозии шейки матки</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <button class="service-item__header">
+              <span class="service-item__icon">⚕</span>
+              <span class="service-item__title">Кардиология</span>
+              <span class="service-item__arrow">›</span>
+            </button>
+            <div class="service-item__content">
+              <ul>
+                <li>ЭКГ</li>
+                <li>ЭХО-КГ (УЗИ сердца)</li>
+                <li>Холтер-мониторинг</li>
+                <li>Консультация кардиолога</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <button class="service-item__header">
+              <span class="service-item__icon">⊕</span>
+              <span class="service-item__title">Лабораторная диагностика</span>
+              <span class="service-item__arrow">›</span>
+            </button>
+            <div class="service-item__content">
+              <ul>
+                <li>Общий анализ крови</li>
+                <li>Биохимический анализ крови</li>
+                <li>Гормональные исследования</li>
+                <li>ПЦР-тесты</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <button class="service-item__header">
+              <span class="service-item__icon">✚</span>
+              <span class="service-item__title">Терапия</span>
+              <span class="service-item__arrow">›</span>
+            </button>
+            <div class="service-item__content">
+              <ul>
+                <li>Консультация терапевта</li>
+                <li>Вакцинация</li>
+                <li>Профилактические осмотры</li>
+                <li>Справки и заключения</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <button class="service-item__header">
+              <span class="service-item__icon">◈</span>
+              <span class="service-item__title">Дерматология</span>
+              <span class="service-item__arrow">›</span>
+            </button>
+            <div class="service-item__content">
+              <ul>
+                <li>Консультация дерматолога</li>
+                <li>Дерматоскопия</li>
+                <li>Удаление новообразований</li>
+                <li>Лечение акне</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
       </div>
       <div id="yandexreview">
         <div class="sw-app " data-app="03a2a1ef77ecb1471614035fd6756983"></div> 
       </div> 
       
     </main>
-    <footer>
-      <p>&copy; 2023 Doctor Vays. All rights reserved.</p>
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <span class="footer__title">Контакты</span>
+          <div class="footer__box">
+            <p><a href="tel:+998950606137">+99895-060-61-37</a></p>
+            <p>или</p>
+            <p><a href="tel:+998900006137">+99890-000-61-37</a></p>
+          </div>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/mammolog.elena.vays/" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://t.me/vayselena" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.05 2.93 2.83 10.1c-1.18.47-1.17 1.13-.22 1.43l4.62 1.45 1.78 5.6c.21.6.36.85.74.85.32 0 .47-.15.66-.35l1.9-1.84 4.04 2.98c.74.41 1.27.2 1.46-.69l2.63-12.4c.27-1.16-.43-1.65-1.39-1.2z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <span class="footer__title">Адрес</span>
+          <div class="footer__box">
+            <p>Мирзо - Улугбекский р- он
+Пр. Мустакиллик дом 79</p>
+          </div>
+          <span class="footer__title">Ориентир</span>
+          <div class="footer__box">
+            <p>Перекрёсток м. Пушкина , вдоль Президентской трассы, 9ти этажный дом</p>
+          </div>
+
+          <span class="footer__title">Режим работы</span>
+          <div class="footer__box">
+            <p>Пн–Сб: 07:00–16:30</p>
+          </div>
+        </div>
+
+        <div class="footer__col footer__map">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=69.301394%2C41.321085&z=17&pt=69.301394,41.321085,pm2rdm"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            allowfullscreen="true"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Doctor Vays. Все права защищены.</p>
+      </div>
     </footer>
     <div class="slide-modal" id="slideModal">
       <div class="slide-modal__overlay"></div>
       <div class="slide-modal__container">
         <button class="slide-modal__close" aria-label="Закрыть">&#x2715;</button>
         <div class="slide-modal__body"></div>
+      </div>
+    </div>
+
+    <div class="doctor-modal" id="doctorModal">
+      <div class="doctor-modal__overlay"></div>
+      <div class="doctor-modal__container">
+        <button class="doctor-modal__close" aria-label="Закрыть">&#x2715;</button>
+        <div class="doctor-modal__body">
+          <div class="doctor-modal__gallery">
+            <div class="swiper doctorGallerySwiper">
+              <div class="swiper-wrapper"></div>
+
+              <div class="swiper-button-next doctorGallery__next"></div>
+              <div class="swiper-button-prev doctorGallery__prev"></div>
+            </div>
+
+            <div thumbsSlider class="swiper doctorThumbSwiper">
+              <div class="swiper-wrapper"></div>
+            </div>
+          </div>
+          <div class="doctor-modal__info">
+            <h2 class="dm-name"></h2>
+            <span class="dm-specialty"></span>
+            <div class="doctor-modal__meta">
+              <div class="doctor-modal__meta-item">
+                <span class="doctor-modal__meta-icon">⏱</span>
+                <span class="dm-experience"></span>
+              </div>
+              <div class="doctor-modal__meta-item">
+                <span class="doctor-modal__meta-icon">⚕</span>
+                <span class="dm-since"></span>
+              </div>
+            </div>
+            <div class="doctor-modal__section">
+              <h4>О враче</h4>
+              <p class="dm-about"></p>
+            </div>
+            <div class="doctor-modal__section">
+              <h4>Специализация</h4>
+              <div class="dm-tags"></div>
+            </div>
+            <button class="doctor-modal__btn">Записаться на приём</button>
+          </div>
+        </div>
       </div>
     </div>
 
