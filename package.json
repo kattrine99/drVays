@@ -1,5 +1,6 @@
 {
-  "dependencies": {
-    "react-router-dom": "^7.15.0"
-  }
+  "scripts": {
+    "build": "echo 'No build needed'"
+  },
+  "dependencies": {}
 }
